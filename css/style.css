@@ -1,0 +1,191 @@
+
+body {
+  font-family: 'roboto',cursive;
+  margin: 0;
+}
+.header{
+
+  height: 500px;
+  background: linear-gradient( rgba(162, 0, 255, 0.65),
+                                #ff00ea60),
+                  url(../img/topo.png);
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.navegacao__redes-sociais{
+  align-items: center;
+  display: flex;
+
+}
+
+.social-media{
+  height: 25px;
+  width: 25 px;
+}
+
+
+.teste{    
+   width: 100%;  
+  }  
+
+.teste1{     
+     width:100%; 
+     text-align: center;    
+ }  
+.h1{    
+   color: #ffffff;    
+   text-transform: uppercase;
+ }
+ .caixa_grande{
+  text-align: center;
+ }
+
+ .caixa_grandona{
+   display: flex;
+   flex-direction: center;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+ }
+ .primeira_img{
+    max-width: 200px;
+ }
+ .primeira_img img{
+  max-width: 100%;
+
+ }
+ .texto_ladobio{
+  width: 50%;
+ }
+ .texto_ladobio2{
+  width: 50%;
+ }
+ .caixacomborda{
+   border:#674582 1px solid;
+   text-align: center;
+   width: 70%;
+   padding: 10px;
+   box-sizing: border-box;
+   font-size: 15px;
+   margin: 20px auto;
+}
+.imagemdabio{
+  margin-right: 10px;
+}
+.historia{
+  margin: auto;
+  width: 70%;
+}
+
+.moldura{
+  display: flex;
+  justify-content: center;
+}
+
+/* inicio media querie de tablet */
+@media(max-width:992px){
+
+  .historia{
+    align-items: center;
+    display:flex ;
+    flex-direction: column-reverse;
+  }
+  .historia-imagem-margareth{
+    width:188px;
+    height: 180px;
+  }
+}
+
+/* final media querie de tablet */
+
+@media(max-width:769px){
+  
+  .historia{
+    align-items: center;
+    display:flex ;
+    flex-direction: column-reverse;
+  }
+
+  .historia-imagem-margareth  {
+      width:188px;
+    height: 180px;
+  }
+
+.header{
+background-size: 100% 264px;  
+background-position: 0px;
+}
+
+.autora_texto h2{
+  font-size: 12px;
+}
+}
+
+
+
+.fotomeio{
+  width: auto;
+}
+.caixa_autora{
+  width: 100%;
+  height: 100px;
+  background-color: #670095 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+ .autora_img img{
+  width: 100px;
+  height :100px;
+  filter: opacity(.6);
+  margin-right: 30px;
+  
+ }
+ .rodape {
+  padding-top: 0;
+}
+
+.rodape__principal {
+ 
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 210px;
+  background: #323534;
+}
+
+.rodape__logo img {
+  max-width: 250px;
+}
+
+.rodape__navegacao > li {
+  font-size: 1.5rem;
+}
+
+.header-personalidade {
+  padding: 0 20rem;
+  display: flex;
+  
+  align-items: flex-end;
+}
+
+.header-personalidade__titulo {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.botao {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  border: black;
+}
+.btn {
+  width: 16%;
+  background-color: #c083b9;
+}
