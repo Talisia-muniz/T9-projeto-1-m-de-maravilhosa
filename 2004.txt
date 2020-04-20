@@ -1,0 +1,5 @@
+aula 20 /04
+const div = document.querySelector('#div')
+const outraDiv = document.querySelector('#outradiv')
+const paragrafo = document.querySelector('p')
+const strong = document.querySelector('strong')
