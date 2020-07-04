@@ -3,3 +3,219 @@ const div = document.querySelector('#div')
 const outraDiv = document.querySelector('#outradiv')
 const paragrafo = document.querySelector('p')
 const strong = document.querySelector('strong')
+
+https://raphaelfabeni.com/atualizando-seu-fork/
+
+
+
+// liga e desliga
+
+const imagem = document.querySelector('img')
+const background = document.body
+const h1 = document.querySelector('h1')
+const gif = document.querySelector('.imagem')
+
+// const body = document.querySelector('body')
+
+background.style.backgroundColor = "red"
+
+function changeBg() {
+  if (background.style.backgroundColor == "red") {
+    background.style.backgroundColor = "black"
+    h1.innerText = "Desligado"
+    h1.style.color = "white"
+    gif.src = "https://media.giphy.com/media/N4a7e1ftdbQWc/giphy.gif"
+  } else {
+    background.style.backgroundColor = "red"
+    h1.innerText = "Ligado"
+    h1.style.color = "black"
+    gif.src = "https://media.giphy.com/media/3KVRMtLXfORVosk6TW/giphy.gif"
+  }
+}
+
+
+exercício createElement
+
+/*
+  Exercício 1
+  -----------
+
+  A função insertion cria elementos no DOM e para isso recebe três argumentos, o elemento, o ID de um elemento
+  já existente no seu HTML e o texto que será inserido no elemento criado. 
+  
+  
+*/
+
+// entenda argumento como um dado que a sua função vai receber de "fora" ao ser
+// invocada, e dentro da função vc pode utilizar cada um desses argumentos
+
+// criando a função que recebe três argumentos
+function insereElementoDeTexto(elemento,id,texto){
+  
+  // criamos um elemento novo que recebe o retorno do método
+  // createElement, e createElement vai criar um elemento especificado no
+  // argumento "elemento"
+  const elementoNovo = document.createElement(elemento)
+
+  // inserindo texto dentro do elementoNovo - usando o innerText
+  elementoNovo.innerText = texto
+
+  // seleciona um elemento existente através do argumento ID
+  // ex.: "#iddoelemento"
+  const elementoExistente = document.querySelector(id)
+
+  // inserindo o elementoNovo dentro do elementoExistente usando appendChild
+  elementoExistente.appendChild(elementoNovo)
+
+}
+
+// executando a função passando os argumentos
+//a função de criar um parágrafo dentro do elemento com ID "conteudo" e com o texto "Fui criado com Java"
+insereElementoDeTexto('h1', "#container", "Fui criado com JS dentro da div container :)")
+
+insereElementoDeTexto('p', '#outraDiv', "Fui criado com JS dentro da div outraDiv :)")
+
+insereElementoDeTexto('strong', "#texto", " agora melhor ainda com JS")
+
+
+
+
+// definindo string
+
+// aspas duplas 
+//"string"
+
+//aspas simples 
+//'string' == "string"
+
+// erro
+//'string'
+
+
+// REVISÃO DE FUNÇÕES
+
+// cria a função 
+// pode não receber nenhum argumento
+// function nomeDaFunção() {
+//   // bloco de código que a função vai executar
+// }
+
+// executando a função sem args
+// nomeDaFunção()
+
+// // a função pode receber n = vários argumentos
+// function funcComVariosArgumentos(argumento1, argumento2, argumento3) {
+//   // bloco de código que a função vai executar
+//   console.log(argumento1, argumento2, argumento3)
+// }
+
+// // executando função com args
+// funcComVariosArgumentos(1, 2, 3
+
+)
+
+
+
+Exercício 3
+  -----------
+
+  Instruções:
+
+  1. crie uma página HTML com um h1 de "Minha lista de Livros"
+
+  2. crie um array com objetos contendo informações dos livros que você mais gosta.
+  
+  ex.: {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J. K. Rowling",
+  }
+
+  4. percorra pelo array de livros e, para cada livro, crie uma div que receba o título e autor do livro e 
+  adicione essa div na página.
+
+  Bonus: adicione uma propriedade com a capa do livro e crie também um img para cada livro
+
+*/
+
+// criando o array de objetos
+const arrayLivros = [
+  {
+    titulo: "Harry Potter e a Pedra Filosofal",
+    autor: "J. K. Rowling",
+    capa: "./capa.jpeg"
+  },
+  {
+    titulo: "Harry Potter e a Câmara Secreta",
+    autor: "J. K. Rowling",
+    capa: "./capa.jpeg"
+  },
+  {
+    titulo: "Harry Potter e a Ordem da Fênix",
+    autor: "J. K. Rowling",
+    capa: "./capa.jpeg"
+  },
+  {
+    titulo: "Harry Potter e o Enigma do Principe",
+    autor: "J. K. Rowling",
+    capa: "./capa.jpeg"
+  }
+]
+
+
+// acessando o body do html com querySelector
+const body = document.querySelector('body')
+
+// percorrendo o array de livros usando o for
+for (let contador = 0; contador < arrayLivros.length; contador++) {
+  // console.log no titulo e autor dos livros
+  //console.log('Titulo', arrayLivros[contador].titulo, "Autora", arrayLivros[contador].autor)
+
+  // criando a div que vai receber as info do livro
+  const divLivro = document.createElement('div')
+
+  // criar um h2 para receber o titulo do livro
+  const tituloH2 = document.createElement('h2')
+  tituloH2.innerText = `Título: ${arrayLivros[contador].titulo}`
+
+  // criar um paragrafo que vai receber a autora do livro
+  const autoraParagrafo = document.createElement('p')
+  autoraParagrafo.innerText = `Autora: ${arrayLivros[contador].autor}`
+
+  // criar img para receber a capa do livro
+  const capaImg = document.createElement('img')
+  capaImg.src = arrayLivros[contador].capa
+
+  //adicionando o tituloH2 e o autoraParágrfo dentro da divLivro
+  divLivro.appendChild(capaImg)
+  divLivro.appendChild(tituloH2)
+  divLivro.appendChild(autoraParagrafo)
+
+  // adicionando divLivro no body
+  body.appendChild(divLivro)
+
+  // outra forma de referenciar o body aqui
+  //document.body.appendChild(divLivro)
+  
+  console.log(divLivro)
+
+}
+
+
+
+ 1. Mude o estilo do body para que a font-family seja "Arial, sans-serif"
+
+  2. selecione os spans do html e substitua cada com informações suas.
+
+  3. crie um arquivo css com a classe "list-item" - que tenha a propriedade color como red.
+
+  4. Percorra por cada li presente na ul e adicione em sua classList a classe "list-item". 
+
+  5. Crie um elemento img e coloque no atributo src uma foto sua. Não se esqueça de adicionar o novo elemento na página.
+
+
+
+
+<li>Nickname: <span id="nickname"></span>
+    <li>Favoritos:  <span id="favoritos"></span>
+    <li>Cidade: <span id="cidade"></span
+

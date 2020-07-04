@@ -1,0 +1,54 @@
+aula de git
+versionamos qualquer doc no git
+aramzenar nossos projetos e usar em quakquer pc
+exemplo criar repositorio com git
+pwd -diz em qual pasta estamos 
+cd para saber qual pasta estou
+git clone mais o link que estou clonando
+depois ls que é de lista das pastas 
+depois  cd  nome da pasta
+quando  crio um arquivo novo fica vermelho untracked files
+git add . usamos paraslavar que o arquivo existe
+git status novamente 
+depois git commit -m inicio
+git push origin master
+git add
+git status
+git commit 
+git push origin master
+
+git log  time line do projeto
+
+git checkout -b  nome do que esta fazendo para voltar em commit anterior ja salvo
+        
+na master só tem coisas que funcionam
+a branch nos ajuda a não colocar codigo errado  na master
+pull request  a pessoa que corrigiu o problema da o pull request
+todo o  processo do pull request acontce n o git gub
+sempre tem que dar git init
+
+git clone depois git remote -v
+
+para atualizar meu fork git push origin master
+
+
+git checkout - b 
+
+afro google
+
+
+https://getbootstrap.com.br/docs/4.1/getting-started/introduction/
+
+
+
+
+
+
+
+
+
+ asdfgççlkasdfg aasassdfgasdfgasdfgasdfgasdfgasdfgasdfgasddfgasdfgasdfgasdfgasdffasdfgçlkjhasdfgçlkjhasddfgçlkjhas
+
+asdfg çlkjh asdfg çlkjh
+
+
